@@ -37,16 +37,18 @@
                     <div class="heading">
                         <h3 class="title">Rebositories</h3>
                     </div>
-                     <div class="col-md-4 card" *ngFor="let repo of repo">
-                        <a href="{{repo.html_url}}">
-                            <h5>{{repo.name}} <a href="{{repo.html_url}}"></a></h5>
-                            <p>{{repo.description}}</p>
-                        </a>
-                        <div class="repo">
-                            <p>{{repo.language}}</p>
-                            <p>Created on {{repo.created_at | date}}</p>
-                            <p>{{repo.forks_count}} forks </p>
-                    </div>
+                    <div class="col-md-12 repo m-3">
+                        <div class="row">
+                            <div class="col-md-4 card" *ngFor="let repo of repo">
+                                <a href="{{repo.html_url}}">
+                                    <h5>{{repo.name}}</h5>
+                                    <p>{{repo.description}}</p>
+                                </a>
+                                <div class="repo">
+                                    <p>{{repo.language}}</p>
+                                    <p>Created on {{repo.created_at | date}}</p>
+                                    <p>{{repo.forks_count}} forks </p>
+                                </div>
                 </div>
             </div> 
             
