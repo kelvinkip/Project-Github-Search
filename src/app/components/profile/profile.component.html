@@ -22,7 +22,7 @@
                         <li class="list-group-item" *ngIf="user.bio">My bio: {{user.bio}}</li>
                         <li class="list-group-item" *ngIf="user.hireable">Available for hire </li>
                         <li class="list-group-item" *ngIf="user.blog"><a href="{{user.blog}}">{{user.blog}}</a></li>
-                        <li class="list-group-item" *ngIf="user.email"><a href="mailto:{{user.email}}">{{user.email}}</a></li>
+                        <li class="list-group-item" *ngIf="user.email">Email: <a href="mailto:{{user.email}}">{{user.email}}</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
