@@ -50,3 +50,7 @@
 .d-flex{
     padding: 55px;
 }
+.list-group{
+    margin-left: 40px;
+    width: 220px;
+}
