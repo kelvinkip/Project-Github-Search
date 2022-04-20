@@ -38,14 +38,39 @@
     margin-left: 610px;
     background-color: grey;
     text-align: center;
+    margin-top: 50px;
 }
 .col-sm-3{
     margin-left: 40px;
 }
-.col-md-4{
-    margin-left: 700px;
+.col-md-6{
+    margin-left: 630px;
     border: 2px solid grey;
+    text-align: center;
 }
 .d-flex{
     padding: 55px;
+}
+.list-group{
+    margin-left: 40px;
+    width: 220px;
+}
+.d-flex{
+    padding-top: 5px;
+    /* background-color: grey; */
+}
+.form-control{
+    background-color: grey;
+}
+.panel{
+    margin-top: -30px;
+}
+.d-flex ::placeholder{
+    color: white;
+}
+h3{
+    text-align: center;
+}
+em{
+    color: orange;
 }
