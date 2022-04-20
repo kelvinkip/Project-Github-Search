@@ -3,7 +3,7 @@
         [(ngModel)]="userName" name="userName" (keyup)="findProfile()">
 </form>
 <div *ngIf="user">
-    <div panel panel-default>
+    <div class="panel panel-default" >
         <div class="panel-heading" style="background-color: grey;">
             {{user.name}} <small>({{user.login}})</small> 
            <span *ngIf="user.company">, works at: {{user.company}}</span>
