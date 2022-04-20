@@ -1,0 +1,51 @@
+.col{
+    width: 175px;
+    margin-top: 40px;
+    margin-left: 300px;
+    margin-top: -200px;
+    /* height: 20vh; */
+}
+.label{
+    margin-left: 600px;
+}
+.label, .label2, .label3, .label4{
+    padding: 5px;
+}
+.label{
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+.label2{
+    background-color: blue;
+    border-radius: 10px;
+}
+.label3{
+    background-color: green;
+    border-radius: 10px;
+    height: 110px;
+}
+.label4{
+    background-color: skyblue;
+    border-radius: 10px;
+}
+.btn{
+    margin-left: 600px;
+    background-color: green;
+    width: 200px;
+    border-radius: 10px;
+}
+.title{
+    margin-left: 610px;
+    background-color: grey;
+    text-align: center;
+}
+.col-sm-3{
+    margin-left: 40px;
+}
+.col-md-4{
+    margin-left: 700px;
+    border: 2px solid grey;
+}
+.d-flex{
+    padding: 55px;
+}

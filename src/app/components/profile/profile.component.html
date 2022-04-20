@@ -1,0 +1,56 @@
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Enter UserName" aria-label="Search"
+        [(ngModel)]="userName" name="userName" (keyup)="findProfile()">
+</form>
+<div *ngIf="user">
+    <div panel panel-default>
+        <div class="panel-heading" style="background-color: grey;">
+            {{user.name}} <small>({{user.login}})</small> 
+           <span *ngIf="user.company">, works at: {{user.company}}</span>
+           {{user.location}}
+        </div>
+        <div class="panel-body">
+            <div class="raw">
+                <div class="col-sm-3">
+                    <img src="{{user.avatar_url}}" class="rounded-circle" alt="" width="290" height="236"> <br>
+                    {{user.name}} <br>
+                    <small>({{user.login}})</small> 
+                </div>
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>
+                        <li class="list-group-item" *ngIf="user.hireable">Available for hire </li>
+                        <li class="list-group-item" *ngIf="user.blog"><a href="{{user.blog}}">{{user.blog}}</a></li>
+                        <li class="list-group-item" *ngIf="user.email"><a href="mailto:{{user.email}}">{{user.email}}</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <p>
+                    <span class="label label-default">{{user.followers}}followers</span>
+                    <span class="label2 label-default">following:{{user.following}}</span>
+                    <span class="label3 label-default">{{user.public_gists}}public_gists</span>
+                    <span class="label4 label-default">{{user.public_repos}}Public_repos</span>
+                </p>
+                <p><a href="{{user.html_url}}" class="btn btn-success-small">View profile on Github</a></p>
+                </div>
+                <div class="panel">
+                    <div class="heading">
+                        <h3 class="title">Rebositories</h3>
+                    </div>
+                     <div class="col-md-4 card" *ngFor="let repo of repo">
+                        <a href="{{repo.html_url}}">
+                            <h5>{{repo.name}} <a href="{{repo.html_url}}"></a></h5>
+                            <p>{{repo.description}}</p>
+                        </a>
+                        <div class="repo">
+                            <p>{{repo.language}}</p>
+                            <p>Created on {{repo.created_at | date}}</p>
+                            <p>{{repo.forks_count}} forks </p>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+
+</div>
